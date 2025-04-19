@@ -3,7 +3,7 @@ import { Package, Send } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <div className="relative min-h-[85vh] flex items-center">
+    <div className="relative min-h-screen flex items-center pt-20">
       {/* Background with gradient overlay */}
       <div className="absolute inset-0 overflow-hidden">
         <img
@@ -11,7 +11,7 @@ const HeroSection = () => {
           alt="Logistics Background"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/80 to-blue-800/40" />
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/90 to-blue-800/50" />
       </div>
 
       {/* Content */}
@@ -19,7 +19,7 @@ const HeroSection = () => {
         <div className="max-w-4xl">
           <div className="flex items-center gap-6 mb-8">
             <div className="bg-white/10 backdrop-blur-sm p-6 rounded-2xl">
-              <img src="/logo.svg" alt="Young King Logo" className="w-20 h-20 text-white" />
+              <img src="/lovable-uploads/1b347ee4-1cab-418e-a413-4b8f6f9065ff.png" alt="Young King Logo" className="w-20 h-20" />
             </div>
             <div className="h-16 w-0.5 bg-white/20" />
             <div>

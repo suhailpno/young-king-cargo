@@ -1,6 +1,7 @@
-import { Phone, Package, Plane, Truck, MapPin, Route, Send, Calendar } from "lucide-react";
 import { useState, useEffect } from "react";
+import { Phone, Package, Plane, Truck, MapPin, Route, Send, Calendar } from "lucide-react";
 import HeroSection from "../components/HeroSection";
+import Navbar from "../components/Navbar";
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -46,6 +47,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
+      <Navbar />
       <HeroSection />
 
       {/* Rates Section */}
