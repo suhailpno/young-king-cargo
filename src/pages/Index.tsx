@@ -1,6 +1,6 @@
-
-import { Phone, Package, Plane, Truck, MapPin, Route } from "lucide-react";
+import { Phone, Package, Plane, Truck, MapPin, Route, Send, Calendar } from "lucide-react";
 import { useState, useEffect } from "react";
+import HeroSection from "../components/HeroSection";
 
 const Index = () => {
   const [isVisible, setIsVisible] = useState(true);
@@ -22,109 +22,87 @@ const Index = () => {
       icon: Plane,
       title: "Air Cargo Shipping",
       description: "Fast and reliable air cargo services between Singapore and India",
-      bgColor: "bg-blue-50"
+      bgColor: "bg-blue-50/90"
     },
     {
       icon: Package,
       title: "Courier & Express Parcel",
       description: "Express parcel delivery for time-sensitive shipments",
-      bgColor: "bg-green-50"
+      bgColor: "bg-blue-50/90"
     },
     {
       icon: Truck,
       title: "Door-to-Door Service",
       description: "Convenient pickup and delivery at your doorstep",
-      bgColor: "bg-purple-50"
+      bgColor: "bg-blue-50/90"
     },
     {
       icon: MapPin,
       title: "Custom Clearance",
       description: "Professional customs clearance assistance",
-      bgColor: "bg-orange-50"
+      bgColor: "bg-blue-50/90"
     }
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white via-gray-50 to-blue-50">
-      {/* Hero Section */}
-      <header className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-blue-700/10 z-0" />
-        <div className="container mx-auto px-4 py-16 md:py-24 relative z-10">
-          <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-            <div className="relative w-32 h-32 mb-8">
-              <img src="/logo.svg" alt="Young King Logo" className="w-full h-full text-blue-700 animate-float" />
-              <div className="absolute -inset-4 bg-blue-100/30 rounded-full blur-xl -z-10" />
-            </div>
-            <h1 className="mt-6 text-4xl md:text-6xl font-bold font-poppins text-gray-900 leading-tight">
-              Young King Pte. Ltd.
-            </h1>
-            <p className="mt-6 text-xl md:text-2xl text-gray-600 font-inter max-w-2xl">
-              Premier Air Cargo Services between Singapore and India
-            </p>
-            <div className="mt-8 flex flex-col sm:flex-row gap-4 items-center">
-              <a
-                href="https://wa.me/6590195799"
-                className="px-8 py-4 bg-green-600 hover:bg-green-700 text-white rounded-full font-semibold font-inter flex items-center gap-2 transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
-              >
-                <Package className="w-5 h-5" />
-                Send Cargo Now on WhatsApp
-              </a>
-              <a
-                href="#rates"
-                className="px-8 py-4 bg-white hover:bg-gray-50 text-gray-800 rounded-full font-semibold font-inter flex items-center gap-2 transition-all border border-gray-200 hover:border-gray-300"
-              >
-                View Our Rates
-              </a>
-            </div>
-          </div>
-        </div>
-      </header>
+    <div className="min-h-screen">
+      <HeroSection />
 
       {/* Rates Section */}
-      <section id="rates" className="py-20 bg-blue-700 relative overflow-hidden">
-        <div className="absolute inset-0 opacity-10">
-          <Route className="w-full h-full text-white" />
+      <section id="rates" className="py-24 bg-gradient-to-b from-blue-900 to-blue-800 relative overflow-hidden">
+        <div className="absolute inset-0 mix-blend-overlay opacity-10">
+          <img
+            src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=2400&q=80"
+            alt="Technology Background"
+            className="w-full h-full object-cover"
+          />
         </div>
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-5xl font-bold text-center font-poppins text-white mb-12">
-            Our Service Rates
+        <div className="container mx-auto px-4 relative z-10">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-white mb-16">
+            Competitive Rates
           </h2>
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center transform hover:scale-105 transition-transform">
-              <div className="flex items-center justify-center gap-4 mb-4">
-                <Plane className="w-8 h-8 text-white" />
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 transform hover:scale-105 transition-all duration-300">
+              <div className="flex items-center justify-center gap-4 mb-6">
+                <div className="p-3 bg-blue-500/20 rounded-xl">
+                  <Send className="w-8 h-8 text-blue-200" />
+                </div>
                 <h3 className="text-xl font-semibold text-white">Singapore to India</h3>
               </div>
-              <p className="text-5xl font-bold mb-2 text-white">$8<span className="text-2xl">/kg</span></p>
+              <p className="text-5xl font-bold mb-2 text-white">$8<span className="text-2xl text-blue-200">/kg</span></p>
+              <p className="text-blue-200">Express Air Cargo Service</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center transform hover:scale-105 transition-transform">
-              <div className="flex items-center justify-center gap-4 mb-4">
-                <Plane className="w-8 h-8 text-white" />
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 transform hover:scale-105 transition-all duration-300">
+              <div className="flex items-center justify-center gap-4 mb-6">
+                <div className="p-3 bg-blue-500/20 rounded-xl">
+                  <Plane className="w-8 h-8 text-blue-200" />
+                </div>
                 <h3 className="text-xl font-semibold text-white">India to Singapore</h3>
               </div>
-              <p className="text-5xl font-bold mb-2 text-white">$6<span className="text-2xl">/kg</span></p>
+              <p className="text-5xl font-bold mb-2 text-white">$6<span className="text-2xl text-blue-200">/kg</span></p>
+              <p className="text-blue-200">Express Air Cargo Service</p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-white">
+      <section className="py-24 bg-gray-50">
         <div className="container mx-auto px-4">
-          <h2 className="text-3xl md:text-5xl font-bold text-center font-poppins mb-12">
+          <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16">
             Our Services
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
               <div
                 key={index}
-                className={`${service.bgColor} p-8 rounded-2xl hover:shadow-xl transition-all transform hover:-translate-y-1`}
+                className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-1"
               >
-                <div className="bg-white p-4 rounded-xl inline-block mb-6">
-                  <service.icon className="w-8 h-8 text-blue-700" />
+                <div className="bg-blue-50 p-4 rounded-xl inline-block mb-6">
+                  <service.icon className="w-8 h-8 text-blue-600" />
                 </div>
-                <h3 className="text-xl font-semibold mb-4 font-poppins">{service.title}</h3>
-                <p className="text-gray-600 font-inter">{service.description}</p>
+                <h3 className="text-xl font-semibold mb-4 text-gray-900">{service.title}</h3>
+                <p className="text-gray-600">{service.description}</p>
               </div>
             ))}
           </div>
@@ -132,23 +110,30 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="container mx-auto px-4 max-w-4xl">
-          <h2 className="text-3xl md:text-5xl font-bold text-center font-poppins mb-12">
-            About Us
-          </h2>
-          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg">
-            <p className="text-lg text-gray-700 text-center font-inter leading-relaxed mb-8">
-              YOUNG KING PTE. LTD. is a Singapore-based logistics company offering fast, secure, and cost-effective courier and air cargo services to and from India. With a strong focus on reliability and customer support, we help individuals and businesses deliver across borders seamlessly.
-            </p>
-            <div className="grid md:grid-cols-2 gap-6 text-center text-gray-600 font-inter">
-              <div className="p-4 bg-gray-50 rounded-xl">
-                <p className="font-semibold">UEN</p>
-                <p>202302772E</p>
-              </div>
-              <div className="p-4 bg-gray-50 rounded-xl">
-                <p className="font-semibold">Address</p>
-                <p>22 Upper Dickson Road, Singapore - 207481</p>
+      <section className="py-24 bg-white relative overflow-hidden">
+        <div className="container mx-auto px-4 relative z-10">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 mb-16">
+              About Us
+            </h2>
+            <div className="bg-white rounded-2xl p-8 md:p-12 shadow-xl">
+              <div className="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                  <img src="/logo.svg" alt="Young King Logo" className="w-32 h-32 mb-8 text-blue-600" />
+                  <p className="text-lg text-gray-700 leading-relaxed mb-8">
+                    YOUNG KING PTE. LTD. is a Singapore-based logistics company offering fast, secure, and cost-effective courier and air cargo services to and from India. With a strong focus on reliability and customer support, we help individuals and businesses deliver across borders seamlessly.
+                  </p>
+                </div>
+                <div className="space-y-6">
+                  <div className="p-6 bg-gray-50 rounded-xl">
+                    <p className="font-semibold text-gray-900 mb-2">UEN</p>
+                    <p className="text-gray-600">202302772E</p>
+                  </div>
+                  <div className="p-6 bg-gray-50 rounded-xl">
+                    <p className="font-semibold text-gray-900 mb-2">Address</p>
+                    <p className="text-gray-600">22 Upper Dickson Road, Singapore - 207481</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
